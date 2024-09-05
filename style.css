@@ -1,0 +1,341 @@
+@font-face {
+    font-family: Dancing;
+    src: url(./fonts/DancingScript-VariableFont_wght.ttf);
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body 
+{
+background-image: url(./images/backGround.png);
+background-repeat: no-repeat;
+background-size: 100% 100%;
+min-height: 100vh;
+}
+
+
+header
+{
+    display: flex;
+    flex-direction: row;
+    min-height: 45vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.profileImg
+{
+    width: 30vh;
+    box-shadow: 11px 10px 5px -6px rgba(0,0,0,0.75);
+    transform: translateX(-100%);
+    animation: slideIn 2s forwards;
+    background-color: black;
+}
+
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.textAboutMe
+{
+    min-height: 34vh;
+    width: 110vh;
+    box-shadow: 11px 10px 5px -6px rgba(0,0,0,0.75);
+    background-color: #061432;
+}
+
+.headerAbout
+{
+    color: white;
+    font-family: Dancing;
+    font-size: 5vh;
+    margin-left: 3vh;
+    border-bottom: 0.3vh solid #d77f01;
+    width: 17vh;
+}
+
+.paragraphAboutMe
+{
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-left: 3vh;
+    margin-top: 2.5vh;
+}
+
+.logosDiv
+{
+    display: flex;
+    justify-content: right;
+    gap: 1vh;
+    margin-right: 4vh;
+    animation: 2s logos infinite;
+}
+
+
+.icons
+{
+    width: 4vh;
+    animation: 1s logos infinite;
+}
+
+.icons:hover
+{
+    cursor: pointer;
+}
+
+@keyframes logos {
+    50% {
+        transform: scale(1.02);
+    }
+}
+
+.mainDiv
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: slideInDiv 2s forwards;
+}
+
+.myProjectsHeader
+{
+    color: white;
+    font-family: Dancing;
+    font-size: 5vh;
+    margin-left: 3vh;
+    border-bottom: 0.3vh solid #d77f01;
+    width: 21vh;
+}
+
+.upperProjectsDiv
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+    margin-top: 4vh;
+}
+
+.projectsDiv
+{
+    border-radius: 1vh;
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    width: 40vh;
+    overflow: hidden;
+    background-color:#0b245a ;
+    transition: all 1s ease-in-out;
+}
+
+.projectsDiv:hover
+{
+    transform: scale(1.1);
+}
+
+@keyframes slideInDiv {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+.underProjectDiv
+{
+    margin-top: 1vh;
+    display: flex;
+    flex-direction: row;
+    gap: 14vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.projectNameHeader
+{
+    color: white;
+    font-family: Dancing;
+    font-size: 3vh;
+    position: relative;
+}
+
+.projectIcon
+{
+    width: 3vh;
+    transition: all .3s ease-in-out;
+}
+
+.projectIcon:hover
+{
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+.projectParagraph
+{
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 37vh;
+    font-size: 1.6vh;
+    margin-top: 2vh;
+    margin-left: 2vh;
+}
+
+.projectNameHeader::after
+{
+    content: '';
+    position: absolute;
+    height: 0.3vh;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    background: #d77f01;
+    transition: width .2s;
+}
+
+.projectNameHeader:hover:after
+{
+    width: 100%;
+}
+
+
+.lowerProjectsDiv
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+    margin-top: 8vh;
+}
+
+.contactDiv
+{
+    display: flex;
+    flex-direction: row;
+    background-color:#0b245a ;
+    margin-top: 10vh;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    gap: 60vh;
+}
+
+.contactInfo
+{
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+.contactHeader
+{
+    color: white;
+    font-family: Dancing;
+    font-size: 4vh;
+    border-bottom: 0.3vh solid #d77f01;
+    width: 16vh;
+}
+
+.phoneDiv
+{
+    display: flex;
+    flex-direction: row;
+    gap: 1vh;
+    align-items: center;
+}
+
+.mailDiv
+{
+    display: flex;
+    flex-direction: row;
+    gap: 1vh;
+    align-items: center;
+}
+
+.coffeeImg
+{
+    width: 40vh;
+    box-shadow: 11px 10px 5px -6px rgba(0,0,0,0.75);
+}
+
+
+@media only screen and (max-width: 600px) {
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+    .textAboutMe {
+        display: flex;
+        flex-direction: column;
+        width: 40vh;
+    }
+    .logosDiv {
+        margin-top: 1vh;
+    }
+    .upperProjectsDiv
+    {
+        flex-direction: column;
+    }
+    .lowerProjectsDiv
+    {
+        flex-direction: column;
+    }
+    .mainDiv
+    {
+        margin-top: 10vh;
+    }
+    .contactDiv
+    {
+        flex-direction: column;
+        gap: 5vh;
+        height: 80vh;
+    }
+}
+
+@media only screen and (max-width: 1025px) {
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+    .textAboutMe {
+        display: flex;
+        flex-direction: column;
+        width: 40vh;
+    }
+    .logosDiv {
+        margin-top: 1vh;
+    }
+    .upperProjectsDiv
+    {
+        flex-direction: column;
+    }
+    .lowerProjectsDiv
+    {
+        flex-direction: column;
+    }
+    .mainDiv
+    {
+        margin-top: 10vh;
+    }
+    .contactDiv
+    {
+        flex-direction: column;
+        gap: 5vh;
+        height: 80vh;
+    }
+}
